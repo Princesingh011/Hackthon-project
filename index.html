@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BhashaSetu AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= AUTH ================= -->
+
+    <section id="auth" class="auth-screen">
+
+        <div class="auth-card">
+
+            <div class="brand">
+                <div class="brand-icon">भ</div>
+
+                <div>
+                    <h1>BhashaSetu AI</h1>
+                    <p>Mother-Tongue Education Assistant</p>
+                </div>
+            </div>
+
+
+            <div class="auth-tabs">
+
+                <button id="loginTab" class="auth-tab active">
+                    Login
+                </button>
+
+                <button id="signupTab" class="auth-tab">
+                    Sign Up
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <div id="loginForm">
+
+                <h2>Welcome Back</h2>
+
+                <p class="muted">
+                    Login to your teacher dashboard
+                </p>
+
+                <label>Email</label>
+
+                <input id="loginEmail" type="email" placeholder="teacher@example.com">
+
+
+                <label>Password</label>
+
+                <input id="loginPassword" type="password" placeholder="Enter password">
+
+
+                <button id="loginBtn" class="primary-btn">
+                    Login
+                </button>
+
+
+                <div class="demo-box">
+
+                    <strong>Demo Account</strong>
+
+                    <p>
+                        Email:
+                        teacher@demo.com
+                    </p>
+
+                    <p>
+                        Password:
+                        1234
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGNUP -->
+
+            <div id="signupForm" class="hidden">
+
+                <h2>Create Account</h2>
+
+                <p class="muted">
+                    Create your teacher account
+                </p>
+
+
+                <label>Name</label>
+
+                <input id="signName" type="text" placeholder="Teacher name">
+
+
+                <label>Email</label>
+
+                <input id="signEmail" type="email" placeholder="teacher@example.com">
+
+
+                <label>Password</label>
+
+                <input id="signPassword" type="password" placeholder="Create password">
+
+
+                <button id="signupBtn" class="primary-btn">
+                    Create Account
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= APP ================= -->
+
+    <section id="app" class="app hidden">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon small">
+                    भ
+                </div>
+
+                <div>
+                    <strong>
+                        BhashaSetu
+                    </strong>
+
+                    <span>
+                        AI Teacher
+                    </span>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <button class="nav active" data-page="home">
+
+                    🏠
+                    <span>Home</span>
+
+                </button>
+
+
+                <button class="nav" data-page="translator">
+
+                    🎙️
+                    <span>Voice Translator</span>
+
+                </button>
+
+
+                <button class="nav" data-page="explain">
+
+                    ✨
+                    <span>Explain Topic</span>
+
+                </button>
+
+
+                <button class="nav" data-page="homework">
+
+                    📝
+                    <span>AI Homework</span>
+
+                </button>
+
+
+                <button class="nav" data-page="history">
+
+                    🕘
+                    <span>History</span>
+
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <button id="logout" class="logout-btn">
+
+                    🚪 Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p id="crumb">
+                        Teacher Dashboard / Home
+                    </p>
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div id="avatar" class="avatar">
+                        T
+                    </div>
+
+                    <div>
+
+                        <strong id="userName">
+                            Teacher
+                        </strong>
+
+                        <span>
+                            Teacher
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= HOME ================= -->
+
+            <section id="home" class="page">
+
+
+                <div class="hero">
+
+                    <div>
+
+                        <span class="tag">
+                            AI-POWERED EDUCATION
+                        </span>
+
+                        <h1>
+                            Teach in any language.
+                            <br>
+                            <span>
+                                Connect every student.
+                            </span>
+                        </h1>
+
+                        <p>
+                            BhashaSetu AI helps teachers
+                            explain topics, translate
+                            classroom speech and create
+                            homework for mother-tongue
+                            education.
+                        </p>
+
+
+                        <button class="primary-btn" data-goto="translator">
+
+                            🎙️ Start Voice Translator
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-visual">
+
+                        <div class="orb">
+
+                            <span>भ</span>
+
+                        </div>
+
+                        <div class="language-chip one">
+                            हिन्दी
+                        </div>
+
+                        <div class="language-chip two">
+                            Santali
+                        </div>
+
+                        <div class="language-chip three">
+                            Mundari
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+                    <div class="stat-card">
+
+                        <span>
+                            🔄
+                        </span>
+
+                        <div>
+                            <strong id="translationCount">
+                                0
+                            </strong>
+
+                            <p>
+                                Translations
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            🌐
+                        </span>
+
+                        <div>
+                            <strong>
+                                2
+                            </strong>
+
+                            <p>
+                                Target Languages
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            🤖
+                        </span>
+
+                        <div>
+                            <strong>
+                                AI
+                            </strong>
+
+                            <p>
+                                Translation Engine
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOOLS -->
+
+                <h2 class="section-title">
+                    Teacher Tools
+                </h2>
+
+
+                <div class="tool-grid">
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            🎙️
+                        </div>
+
+                        <h3>
+                            Voice Translator
+                        </h3>
+
+                        <p>
+                            Speak Hindi or English
+                            and translate classroom
+                            speech into Santali or
+                            Mundari.
+                        </p>
+
+                        <button data-goto="translator" class="outline-btn">
+
+                            Open Translator →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            💡
+                        </div>
+
+                        <h3>
+                            Explain Topic
+                        </h3>
+
+                        <p>
+                            Get simple AI explanations
+                            and classroom activities.
+                        </p>
+
+                        <button data-goto="explain" class="outline-btn">
+
+                            Explain Topic →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            AI Homework
+                        </h3>
+
+                        <p>
+                            Generate age-appropriate
+                            homework questions.
+                        </p>
+
+                        <button data-goto="homework" class="outline-btn">
+
+                            Create Homework →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- WORKFLOW -->
+
+                <div class="workflow">
+
+                    <div>
+
+                        <span class="tag">
+                            HOW IT WORKS
+                        </span>
+
+                        <h2>
+                            From teacher speech
+                            to student understanding.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="steps">
+
+                        <div class="step">
+
+                            <b>01</b>
+
+                            <strong>
+                                Speak
+                            </strong>
+
+                            <span>
+                                Teacher speaks in
+                                Hindi or English.
+                            </span>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <b>02</b>
+
+                            <strong>
+                                Translate
+                            </strong>
+
+                            <span>
+                                AI converts the
+                                speech into the
+                                target language.
+                            </span>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <b>03</b>
+
+                            <strong>
+                                Learn
+                            </strong>
+
+                            <span>
+                                Student sees and
+                                hears the translation.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= TRANSLATOR ================= -->
+
+            <section id="translator" class="page hidden">
+
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <span class="tag">
+                            LIVE AI TRANSLATION
+                        </span>
+
+                        <h1>
+                            Voice Translator
+                        </h1>
+
+                        <p>
+                            Speak naturally. BhashaSetu
+                            converts your classroom
+                            speech using AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LANGUAGE SELECT -->
+
+                <div class="language-bar">
+
+                    <div class="language-select">
+
+                        <label>
+                            Teacher Language
+                        </label>
+
+                        <select id="sourceLang">
+
+                            <option value="Hindi">
+                                Hindi
+                            </option>
+
+                            <option value="English">
+                                English
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="language-select">
+
+                        <label>
+                            Student Language
+                        </label>
+
+                        <select id="targetLang">
+
+                            <option value="Santali">
+                                Santali
+                            </option>
+
+                            <option value="Mundari">
+                                Mundari
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TRANSLATOR GRID -->
+
+                <div class="translator-grid">
+
+
+                    <!-- TEACHER -->
+
+                    <div class="speech-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="mini-label">
+                                    TEACHER
+                                </span>
+
+                                <h3>
+                                    Original Speech
+                                </h3>
+
+                            </div>
+
+                            <span id="processing" class="status">
+                                READY
+                            </span>
+
+                        </div>
+
+
+                        <div id="liveText" class="speech-text">
+
+                            Start speaking or
+                            select a demo sentence...
+
+                        </div>
+
+
+                        <button id="micBtn" class="mic-btn">
+
+                            🎙️ Start speaking
+
+                        </button>
+
+
+                        <div class="sample-row">
+
+                            <span>
+                                Quick demo:
+                            </span>
+
+                            <button data-sample="बच्चों, आज हम जल चक्र के बारे में पढ़ेंगे।">
+
+                                Hindi Demo
+
+                            </button>
+
+                            <button data-sample="Today we will learn about the water cycle.">
+
+                                English Demo
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STUDENT -->
+
+                    <div class="student-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="mini-label">
+                                    STUDENT
+                                </span>
+
+                                <h3 id="studentLang">
+                                    SANTALI
+                                </h3>
+
+                            </div>
+
+                            <button id="speakBtn" class="speaker-btn">
+
+                                🔊
+
+                            </button>
+
+                        </div>
+
+
+                        <div id="studentText" class="student-text">
+
+                            Translation will appear
+                            here...
+
+                        </div>
+
+
+                        <div class="confidence">
+
+                            <div class="confidence-top">
+
+                                <span>
+                                    AI Confidence
+                                </span>
+
+                                <strong id="confidence">
+                                    0%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div id="confidenceBar" class="progress-fill">
+                                </div>
+
+                            </div>
+
+
+                            <small id="route">
+                                Waiting for translation
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOG -->
+
+                <div class="log-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="mini-label">
+                                SESSION
+                            </span>
+
+                            <h3>
+                                Translation Log
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="log-head">
+
+                        <span>
+                            TIME
+                        </span>
+
+                        <span>
+                            ORIGINAL
+                        </span>
+
+                        <span>
+                            TRANSLATION
+                        </span>
+
+                        <span>
+                            CONFIDENCE
+                        </span>
+
+                    </div>
+
+
+                    <div id="log" class="log">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= EXPLAIN ================= -->
+
+            <section id="explain" class="page hidden">
+
+
+                <div class="page-heading">
+
+                    <span class="tag">
+                        AI TEACHING ASSISTANT
+                    </span>
+
+                    <h1>
+                        Explain a Topic
+                    </h1>
+
+                    <p>
+                        Get a simple classroom-ready
+                        explanation.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <label>
+                        Topic
+                    </label>
+
+                    <input id="explainTopic" type="text" placeholder="Example: Water Cycle">
+
+
+                    <label>
+                        Explanation Language
+                    </label>
+
+                    <select id="explainLang">
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Hindi">
+                            Hindi
+                        </option>
+
+                    </select>
+
+
+                    <button id="explainBtn" class="primary-btn">
+
+                        Explain with AI ✦
+
+                    </button>
+
+                </div>
+
+
+                <div id="explainResult" class="result-card hidden">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= HOMEWORK ================= -->
+
+            <section id="homework" class="page hidden">
+
+
+                <div class="page-heading">
+
+                    <span class="tag">
+                        AI CLASSROOM TOOL
+                    </span>
+
+                    <h1>
+                        AI Homework Generator
+                    </h1>
+
+                    <p>
+                        Generate homework questions
+                        for your students.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <label>
+                        Topic
+                    </label>
+
+                    <input id="hwTopic" type="text" placeholder="Example: Water Cycle">
+
+
+                    <label>
+                        Class
+                    </label>
+
+                    <select id="hwGrade">
+
+                        <option value="Class 1">
+                            Class 1
+                        </option>
+
+                        <option value="Class 2">
+                            Class 2
+                        </option>
+
+                        <option value="Class 3" selected>
+                            Class 3
+                        </option>
+
+                        <option value="Class 4">
+                            Class 4
+                        </option>
+
+                        <option value="Class 5">
+                            Class 5
+                        </option>
+
+                    </select>
+
+
+                    <label>
+                        Language
+                    </label>
+
+                    <select id="hwLang">
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Hindi">
+                            Hindi
+                        </option>
+
+                    </select>
+
+
+                    <label>
+                        Number of Questions
+                    </label>
+
+                    <input id="hwCount" type="number" min="1" max="20" value="5">
+
+
+                    <button id="hwBtn" class="primary-btn">
+
+                        Generate Homework ✦
+
+                    </button>
+
+                </div>
+
+
+                <div id="hwResult" class="result-card hidden">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= HISTORY ================= -->
+
+            <section id="history" class="page hidden">
+
+
+                <div class="page-heading">
+
+                    <span class="tag">
+                        SESSION HISTORY
+                    </span>
+
+                    <h1>
+                        Translation History
+                    </h1>
+
+                    <p>
+                        Recent classroom translations.
+                    </p>
+
+                </div>
+
+
+                <div class="history-card">
+
+                    <div id="historyTable">
+
+                        <div class="empty-history">
+                            No translation activity yet.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </section>
+
+
+
+    <!-- TOAST -->
+
+    <div id="toast" class="toast">
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
